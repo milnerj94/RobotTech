@@ -1,0 +1,4 @@
+servers hosts:webservers remote_user:root - name: Ensure apache is at the latest                                                                              version ansible.builtin.yum: name: http state: latest - name:
+Write the apache config file ansible.builtin.template: src: /srv/httpd.j2 dest:                                                                              /etc/httppd.conf- name Update db servers hosts databases remote_user: root tasks                                                                             : - name: ensure postgresql is at latest version ansible.builtin.yum: name: post                                                                             gresql state: latest - name: Ensure that postgresql is started ansible.builtin.s                                                                             ervice: name: postgresql state: started
+
+
